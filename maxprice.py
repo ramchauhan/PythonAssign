@@ -3,7 +3,6 @@ import csv
 
 class MaxCast(object): 
     inputstrings = sys.argv
-    import pdb; pdb.set_trace()
     final_dict = {'company': [], 'month': [], 'year': [], 'price' : []}
     def argsparse(self):
         if(len(sys.argv)) <= 1:
@@ -17,7 +16,6 @@ class MaxCast(object):
             self.reader = csv.reader(self.csvf)
 
     def read_data(self):
-        import pdb; pdb.set_trace()
         year = []
         month = []
         share_price = []
