@@ -1,7 +1,7 @@
 import sys
 import csv
 
-class MaxCast(): 
+class MaxCast(object): 
     inputstrings = sys.argv
     final_dict = {'company': [], 'month': [], 'year': [], 'price' : []}
     def argsparse(self):
