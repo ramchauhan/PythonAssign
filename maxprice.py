@@ -3,6 +3,7 @@ import csv
 
 class MaxCast(object): 
     inputstrings = sys.argv
+    import pdb; pdb.set_trace()
     final_dict = {'company': [], 'month': [], 'year': [], 'price' : []}
     def argsparse(self):
         if(len(sys.argv)) <= 1:
