@@ -16,6 +16,7 @@ class MaxCast(object):
             self.reader = csv.reader(self.csvf)
 
     def read_data(self):
+        import pdb; pdb.set_trace()
         year = []
         month = []
         share_price = []
