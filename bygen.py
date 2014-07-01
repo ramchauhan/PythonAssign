@@ -35,7 +35,8 @@ def getitemsmatch(pattern, dict_item, start):
                 min_price.append(min_val)
 
         else:
-            dict_item['item']['price'][ind].remove(min_val) 
+            dict_item['item']['price'][ind].remove(min_val)
+            # will need to implement this here 
 
        
     end = time.time() 
