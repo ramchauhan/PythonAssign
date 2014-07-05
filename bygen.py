@@ -19,7 +19,6 @@ def read_files(filenames):
             yield line
 
 def getitemsmatch(pattern, dict_item, start):
-    import pdb; pdb.set_trace()
     max_list = []
     min_price = []
     for ind, item in enumerate(dict_item['id']):
