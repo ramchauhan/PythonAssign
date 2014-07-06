@@ -22,6 +22,7 @@ def getitemsmatch(pattern, dict_item, start):
     max_list = []
     min_price = []
     for ind, item in enumerate(dict_item['id']):
+        import pdb; pdb.set_trace()
         min_val = min(dict_item['item']['price'][ind])
         min_index = dict_item['item']['price'][ind].index(min_val)
         match = set(dict_item['item']['items'][ind][min_index]) & set(pattern)
@@ -34,8 +35,18 @@ def getitemsmatch(pattern, dict_item, start):
                 min_price.append(min_val)
 
         else:
-            dict_item['item']['price'][ind].remove(min_val)
-            # will need to implement this here 
+            get = False
+            matched = []
+            price = []
+            while len(dict_item['item']['price'][ind]) > 0 or get=True:
+                price.append(min_value)
+                dict_item['item']['price'][ind].remove(min_val)
+                matched.append(dict_item['item']['items'][ind][min_index])
+                min_val = min(dict_item['item']['price'][ind])
+                min_index = dict_item['item']['price'][ind].index(min_val)
+
+                
+                # will need to implement this here 
 
        
     end = time.time() 
