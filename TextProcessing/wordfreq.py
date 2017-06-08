@@ -28,9 +28,9 @@ class CountWordFrequency(object):
         """
         if is_noise_words:
             try:
-                nf = open("stop_words_list", "r")
+                nf = open("stop_words_list.txt", "r")
             except IOError as ex:
-                raise "No such file or director found, please try with valid file"
+                raise "No such file or directory found, please try with valid file"
 
             return nf.read().lower().replace("\n", " ")
 
@@ -70,5 +70,5 @@ class CountWordFrequency(object):
         return
 
 
-c = CountWordFrequency('noise_words', is_noise_words=True)
+c = CountWordFrequency('noise_words.txt', is_noise_words=True)
 print c.count_occurrences()
